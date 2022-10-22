@@ -8,7 +8,9 @@ const init = async () => {
     host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
       cors: {
-        origin: ['*']
+        origin: ['*'],
+        headers: ['Accept', 'Content-Type'],
+        additionalHeaders: ['X-Requested-With']
       }
     }
   })
